@@ -1,0 +1,404 @@
+@prefix opendataswiss-org:  <https://register.ld.admin.ch/opendataswiss/org/> .
+@prefix schema:  <http://schema.org/> .
+@prefix adms:  <http://www.w3.org/ns/adms#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix example-avs-id:  <http://example.com/avs_id/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd:  <http://www.wikidata.org/entity/> .
+@prefix human-sex:  <http://publications.europa.eu/resource/authority/human-sex/> .
+@prefix hydra:  <http://www.w3.org/ns/hydra/core#> .
+@prefix cv:  <http://data.europa.eu/m8g/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix meta:  <https://cube.link/meta/> .
+@prefix example-person:  <http://example.com/person/> .
+@prefix person:  <http://www.w3.org/ns/person#> .
+@prefix md:  <https://cube-creator.zazuko.com/shared-dimensions/vocab#> .
+@prefix locn:  <http://www.w3.org/ns/locn#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+example-person:7565626146561
+        rdf:type         person:Person ;
+        foaf:familyName  "Mouse" ;
+        foaf:givenName   "Margie" ;
+        cv:birthDate     "1912-10-22"^^xsd:date ;
+        cv:sex           human-sex:FEMALE ;
+        rdfs:seeAlso     wd:Q111082709 ;
+        dct:identifier   example-avs-id:7565626146561 .
+
+example-avs-id:7565626146561
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7565626146561" .
+
+example-person:7563797564085
+        rdf:type         person:Person ;
+        foaf:familyName  "Goat" ;
+        foaf:givenName   "Gideon" ;
+        cv:birthDate     "1937-03-18"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q112223829 ;
+        dct:identifier   example-avs-id:7563797564085 .
+
+example-avs-id:7563797564085
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7563797564085" .
+
+example-person:7566939230183
+        rdf:type         person:Person ;
+        foaf:familyName  "Mouse" ;
+        foaf:givenName   "Markus" ;
+        cv:birthDate     "1939-12-06"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q2334015 ;
+        dct:identifier   example-avs-id:7566939230183 .
+
+example-avs-id:7566939230183
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7566939230183" .
+
+example-person:7566422590732
+        rdf:type         person:Person ;
+        foaf:familyName  "Robin" ;
+        foaf:givenName   "Christopher" ;
+        cv:birthDate     "1945-11-28"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q27304877 ;
+        dct:identifier   example-avs-id:7566422590732 .
+
+example-avs-id:7566422590732
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7566422590732" .
+
+example-person:7569468062614
+        rdf:type         person:Person ;
+        foaf:familyName  "Hood" ;
+        foaf:givenName   "Robin" ;
+        cv:birthDate     "1947-08-29"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q3437147 ;
+        dct:identifier   example-avs-id:7569468062614 .
+
+example-avs-id:7569468062614
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7569468062614" .
+
+example-person:7565691946349
+        rdf:type         person:Person ;
+        foaf:familyName  "Mouse" ;
+        foaf:givenName   "Mickey" ;
+        cv:birthDate     "1949-12-14"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q11934 ;
+        dct:identifier   example-avs-id:7565691946349 .
+
+example-avs-id:7565691946349
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7565691946349" .
+
+example-person:7564934397498
+        rdf:type         person:Person ;
+        foaf:familyName  "Mouse" ;
+        foaf:givenName   "Minerva" ;
+        cv:birthDate     "1951-05-07"^^xsd:date ;
+        cv:sex           human-sex:FEMALE ;
+        rdfs:seeAlso     wd:Q11936 ;
+        dct:identifier   example-avs-id:7564934397498 .
+
+example-avs-id:7564934397498
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7564934397498" .
+
+example-person:7563038909224
+        rdf:type         person:Person ;
+        foaf:familyName  "Mouse" ;
+        foaf:givenName   "Minnie" ;
+        cv:birthDate     "1972-05-10"^^xsd:date ;
+        cv:sex           human-sex:FEMALE ;
+        rdfs:seeAlso     wd:Q11936 ;
+        dct:identifier   example-avs-id:7563038909224 .
+
+example-avs-id:7563038909224
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7563038909224" .
+
+example-person:7561230860077
+        rdf:type         person:Person ;
+        foaf:familyName  "McDuck" ;
+        foaf:givenName   "Scrooge" ;
+        cv:birthDate     "1976-04-22"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q11937 ;
+        dct:identifier   example-avs-id:7561230860077 .
+
+example-avs-id:7561230860077
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7561230860077" .
+
+example-person:7562378067595
+        rdf:type         person:Person ;
+        foaf:familyName  "Duck" ;
+        foaf:givenName   "Donald" ;
+        cv:birthDate     "1977-01-20"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q6550 ;
+        dct:identifier   example-avs-id:7562378067595 .
+
+example-avs-id:7562378067595
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7562378067595" .
+
+example-person:7562186711192
+        rdf:type         person:Person ;
+        foaf:familyName  "Armstrong" ;
+        foaf:givenName   "Tricia" ;
+        cv:birthDate     "1991-04-12"^^xsd:date ;
+        cv:sex           human-sex:FEMALE ;
+        rdfs:seeAlso     wd:Q104869376 ;
+        dct:identifier   example-avs-id:7562186711192 .
+
+example-avs-id:7562186711192
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7562186711192" .
+
+example-person:7564098604807
+        rdf:type         person:Person ;
+        foaf:familyName  "Tataroğlu" ;
+        foaf:givenName   "İnci" ;
+        cv:birthDate     "1991-07-30"^^xsd:date ;
+        cv:sex           human-sex:FEMALE ;
+        rdfs:seeAlso     wd:Q100927311 ;
+        dct:identifier   example-avs-id:7564098604807 .
+
+example-avs-id:7564098604807
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7564098604807" .
+
+example-person:7568849389654
+        rdf:type         person:Person ;
+        foaf:familyName  "Caldwell" ;
+        foaf:givenName   "Alan" ;
+        cv:birthDate     "1996-03-12"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101052856 ;
+        dct:identifier   example-avs-id:7568849389654 .
+
+example-avs-id:7568849389654
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7568849389654" .
+
+example-person:7565949876756
+        rdf:type         person:Person ;
+        foaf:familyName  "McMullen" ;
+        foaf:givenName   "Jessie" ;
+        cv:birthDate     "1998-01-21"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101052928 ;
+        dct:identifier   example-avs-id:7565949876756 .
+
+example-avs-id:7565949876756
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7565949876756" .
+
+example-person:7565554356834
+        rdf:type         person:Person ;
+        foaf:familyName  "Pierce" ;
+        foaf:givenName   "Edward" ;
+        cv:birthDate     "1999-07-30"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101053041 ;
+        dct:identifier   example-avs-id:7565554356834 .
+
+example-avs-id:7565554356834
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7565554356834" .
+
+example-person:7563100078216
+        rdf:type         person:Person ;
+        foaf:familyName  "Richmond" ;
+        foaf:givenName   "Anthony" ;
+        cv:birthDate     "2006-05-23"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101062929 ;
+        dct:identifier   example-avs-id:7563100078216 .
+
+example-avs-id:7563100078216
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7563100078216" .
+
+example-person:7563429487423
+        rdf:type         person:Person ;
+        foaf:familyName  "Richmond" ;
+        foaf:givenName   "Tony" ;
+        cv:birthDate     "2009-04-23"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101062929 ;
+        dct:identifier   example-avs-id:7563429487423 .
+
+example-avs-id:7563429487423
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7563429487423" .
+
+example-person:7564386875681
+        rdf:type         person:Person ;
+        foaf:familyName  "Rutland" ;
+        foaf:givenName   "Mark" ;
+        cv:birthDate     "2016-09-29"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101063012 ;
+        dct:identifier   example-avs-id:7564386875681 .
+
+example-avs-id:7564386875681
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7564386875681" .
+
+example-person:7561256952909
+        rdf:type         person:Person ;
+        foaf:familyName  "Armstrong" ;
+        foaf:givenName   "Paul" ;
+        cv:birthDate     "2016-10-14"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101068819 ;
+        dct:identifier   example-avs-id:7561256952909 .
+
+example-avs-id:7561256952909
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7561256952909" .
+
+example-person:7562907209281
+        rdf:type         person:Person ;
+        foaf:familyName  "Bradley" ;
+        foaf:givenName   "Paul" ;
+        cv:birthDate     "2019-07-02"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101072692 ;
+        dct:identifier   example-avs-id:7562907209281 .
+
+example-avs-id:7562907209281
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7562907209281" .
+
+example-person:7560605260238
+        rdf:type         person:Person ;
+        foaf:familyName  "Meredith" ;
+        foaf:givenName   "Douglas" ;
+        cv:birthDate     "1922-06-06"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101078234 ;
+        dct:identifier   example-avs-id:7560605260238 .
+
+example-avs-id:7560605260238
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7560605260238" .
+
+example-person:7562629102143
+        rdf:type         person:Person ;
+        foaf:familyName  "Miller" ;
+        foaf:givenName   "Reno" ;
+        cv:birthDate     "1978-07-03"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101096123 ;
+        dct:identifier   example-avs-id:7562629102143 .
+
+example-avs-id:7562629102143
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7562629102143" .
+
+example-person:7562966486647
+        rdf:type         person:Person ;
+        foaf:familyName  "Campbell" ;
+        foaf:givenName   "Robert" ;
+        cv:birthDate     "1996-12-31"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101112186 ;
+        dct:identifier   example-avs-id:7562966486647 .
+
+example-avs-id:7562966486647
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7562966486647" .
+
+example-person:7569629683115
+        rdf:type         person:Person ;
+        foaf:familyName  "Hale" ;
+        foaf:givenName   "Patrick" ;
+        cv:birthDate     "2010-03-31"^^xsd:date ;
+        cv:sex           human-sex:MALE ;
+        rdfs:seeAlso     wd:Q101112187 ;
+        dct:identifier   example-avs-id:7569629683115 .
+
+example-avs-id:7569629683115
+        rdf:type           adms:Identifier ;
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de ;
+        rdfs:label         "AHV-Nummer"@de ;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+        skos:notation      "7569629683115" .
