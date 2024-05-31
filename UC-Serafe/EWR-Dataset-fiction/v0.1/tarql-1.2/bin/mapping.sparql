@@ -1,0 +1,64 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix cv: <http://data.europa.eu/m8g/>
+prefix dct: <http://purl.org/dc/terms/>
+prefix locn: <http://www.w3.org/ns/locn#>
+prefix person: <http://www.w3.org/ns/person#>
+prefix time: <http://www.w3.org/2006/time#>
+prefix locn: <http://www.w3.org/ns/locn#>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix ex: <http://example.com/>
+prefix example-person:  <http://example.com/person/>
+prefix example-ewr: <http://example.com/ewr/>
+prefix example-ewr-mv: <http://example.com/ewr/mv/be/>
+prefix example-ewr-mv-pr: <http://example.com/ewr/mv/principal_residence/be/>
+prefix example-ewr-mv-validity-period: <http://example.com/ewr/mv/be/validity_period/>
+prefix example-ewr-mv-pr-adr: <http://example.com/ewr/mv/principal_residence/be/address/>
+
+CONSTRUCT {
+	?mvURL a cv:Evidence ;
+		dct:publisher example-ewr:bern ;
+		dct:conformsTo ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+		dct:subject ?persURL ;
+		dct:issued ?startDateAsDate ;
+		dct:type ex:EWRMeldeverhaeltnisPrincipalResidence ;
+		dct:identifier ?idStr ;
+		cv:validityPeriod ?validityPeriodURL ;
+		cv:registeredAddress ?addressURL ;
+		dct:title "Meldeverhältnis Résidence principale" .
+		
+	?addressURL a locn:Address ;
+		locn:thoroughfare ?streetStr ;
+		locn:locatorDesignator ?streetNrStr ;
+		locn:postCode ?postalCodeStr ;
+		locn:postName ?cityStr .
+		
+	?validityPeriodURL a time:ProperInterval ;
+	  time:hasBeginning [
+		time:inXSDDate ?startDateAsDate ;
+		rdf:type time:Instant ;
+	  ] ;
+	  time:hasEnd [
+		time:inXSDDate ?endDateAsDate ;
+		rdf:type time:Instant ;
+	  ] .
+}
+WHERE {
+  BIND (URI(CONCAT('http://example.com/person/', STR(?personAvsNr))) AS ?persURL)
+  BIND (URI(CONCAT('http://example.com/ewr/mv/principal_residence/be/', STR(?id))) AS ?mvURL)
+  BIND (URI(CONCAT('http://example.com/ewr/mv/be/validity_period/', STR(?id))) AS ?validityPeriodURL)
+  BIND (URI(CONCAT('http://example.com/ewr/mv/principal_residence/be/address/', STR(?id))) AS ?addressURL)
+  BIND (STR(?id) as ?idStr)
+  BIND (STR(?street) as ?streetStr)
+  BIND (STR(?streetNr) as ?streetNrStr)
+  BIND (STR(?postalCode) as ?postalCodeStr)
+  BIND (STR(?city) as ?cityStr)
+  BIND (xsd:date(?startDate) as ?startDateAsDate)
+  BIND (xsd:date(?endDate) as ?endDateAsDate)
+  }
+
+
+
+

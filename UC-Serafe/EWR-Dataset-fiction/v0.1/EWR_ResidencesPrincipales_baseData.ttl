@@ -1,0 +1,29 @@
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cv:  <http://data.europa.eu/m8g/> .
+@prefix ex:  <http://example.com/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix person:  <http://www.w3.org/ns/person#> .
+@prefix example-person:  <http://example.com/person/> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix locn:  <http://www.w3.org/ns/locn#> .
+@prefix example-ewr:  <http://example.com/ewr/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+ex:evidenceTypeListEWR
+        rdf:type                  cv:EvidenceTypeList ;
+        cv:specifiesEvidenceType  ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        cv:specifiesEvidenceType  ex:evidenceTypeEWRMeldeverhaeltnisSecondaryHome .
+
+ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence
+        rdf:type                       cv:EvidenceType ;
+        cv:evidenceTypeClassification  ex:EWRMeldeverhaeltnisPrincipalResidence .
+
+ex:evidenceTypeEWRMeldeverhaeltnisSecondaryHome
+        rdf:type                       cv:EvidenceType ;
+        cv:evidenceTypeClassification  ex:EWRMeldeverhaeltnisSecondaryHome .
+
+example-ewr:bern  rdf:type  foaf:Agent ;
+        skos:prefLabel  "EWR Bern"@en .
