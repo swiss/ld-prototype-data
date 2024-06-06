@@ -197,8 +197,8 @@ example-avs-id:7562186711192
 
 example-person:7564098604807
         rdf:type         person:Person ;
-        foaf:familyName  "Tataroğlu" ;
-        foaf:givenName   "İnci" ;
+        foaf:familyName  "Tataroglu" ;
+        foaf:givenName   "Inci" ;
         cv:birthDate     "1991-07-30"^^xsd:date ;
         cv:sex           human-sex:FEMALE ;
         rdfs:seeAlso     wd:Q100927311 ;
