@@ -51,9 +51,15 @@ def queryEndPointsOneFederatedQuery(EWREndpoint, UPIEndpoint) :
         PREFIX dct:  <http://purl.org/dc/terms/>
         PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
         PREFIX ex: <http://example.com/>
-        SELECT ?evidence ?person ?name ?surname WHERE {
+        PREFIX cv:  <http://data.europa.eu/m8g/> 
+        PREFIX locn: <http://www.w3.org/ns/locn#> 
+        SELECT ?evidence ?person ?postCode ?city ?name ?surname WHERE {
         ?evidence dct:conformsTo ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
-          dct:subject ?person .
+          dct:subject ?person ;
+          cv:registeredAddress ?adr .
+        ?adr locn:postCode ?postCode ;
+          locn:postName ?city .
+
         SERVICE <""" + UPIEndpoint + """> {
             ?person foaf:familyName ?name .
             OPTIONAL{?person foaf:givenName ?surname}
@@ -74,7 +80,7 @@ def queryEndPointsOneFederatedQuery(EWREndpoint, UPIEndpoint) :
 
         print("Query results: "  + str(len(results["results"]["bindings"])))
         for result in results["results"]["bindings"]:
-            print(result["name"]["value"] + " " + result["surname"]["value"])
+            print(result["name"]["value"] + " " + result["surname"]["value"] + " (" + result["postCode"]["value"] + " " + result["city"]["value"] + ")")
 
     # ret is a stream with the results in XML, see <http://www.w3.org/TR/rdf-sparql-XMLres/>
     except Exception as err:
@@ -94,9 +100,14 @@ def queryEndPointsTwoQueries(EWREndpoint, UPIEndpoint) :
     queryStringEWR = """
         PREFIX dct:  <http://purl.org/dc/terms/>
         PREFIX ex: <http://example.com/>
-        SELECT ?evidence ?person WHERE {
+        PREFIX cv:  <http://data.europa.eu/m8g/> 
+        PREFIX locn: <http://www.w3.org/ns/locn#> 
+        SELECT ?evidence ?person ?postCode ?city WHERE {
         ?evidence dct:conformsTo ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
-          dct:subject ?person .
+          dct:subject ?person ;
+          cv:registeredAddress ?adr .
+        ?adr locn:postCode ?postCode ;
+          locn:postName ?city .
         } """
 
     queryStringUPI = """
@@ -123,9 +134,12 @@ def queryEndPointsTwoQueries(EWREndpoint, UPIEndpoint) :
         results = sparqlEWR.query().convert()
 
         print("EWR query results: "  + str(len(results["results"]["bindings"])))
+
+        arrayAddresses = {}
+
         for result in results["results"]["bindings"]:
-            #print(result["person"]["value"])
             personValues += "<" + result["person"]["value"] + "> "
+            arrayAddresses[result["person"]["value"]] = result["postCode"]["value"] + " " + result["city"]["value"]
 
         print("\nPerson list for VALUE in the UPI query: " + personValues )
         queryStringUPI = queryStringUPI.replace("PERSON_VALUES_TO_REPLACE", personValues)   
@@ -137,7 +151,11 @@ def queryEndPointsTwoQueries(EWREndpoint, UPIEndpoint) :
 
         print("\nUPI query results: " + str(len(results["results"]["bindings"])))
         for result in results["results"]["bindings"]:
-            print(result["name"]["value"] + " " + result["surname"]["value"])
+            person = result["person"]["value"]
+            if person in arrayAddresses:
+                print(result["name"]["value"] + " " + result["surname"]["value"] + " (" +  arrayAddresses[person] + ")")
+            else:
+                print(result["name"]["value"] + " " + result["surname"]["value"] + " (No available address)")
 
     # ret is a stream with the results in XML, see <http://www.w3.org/TR/rdf-sparql-XMLres/>
     except Exception as err:
@@ -153,9 +171,14 @@ def queryEndPointsOneQueryPerPerson(EWREndpoint, UPIEndpoint) :
     queryStringEWR = """
         PREFIX dct:  <http://purl.org/dc/terms/>
         PREFIX ex: <http://example.com/>
-        SELECT ?evidence ?person WHERE {
+        PREFIX cv:  <http://data.europa.eu/m8g/> 
+        PREFIX locn: <http://www.w3.org/ns/locn#> 
+        SELECT ?evidence ?person ?postCode ?city WHERE {
         ?evidence dct:conformsTo ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
-            dct:subject ?person .
+            dct:subject ?person ;
+            cv:registeredAddress ?adr .
+        ?adr locn:postCode ?postCode ;
+            locn:postName ?city .
         } """
 
     queryStringUPI = """
@@ -190,7 +213,7 @@ def queryEndPointsOneQueryPerPerson(EWREndpoint, UPIEndpoint) :
             resultsUPI = sparqlUPI.query().convert()
             #print("UPI query results: "  + str(len(resultsUPI["results"]["bindings"])))
             for resultUPI in resultsUPI["results"]["bindings"]:
-                print(resultUPI["name"]["value"] + " " + resultUPI["surname"]["value"])
+                print(resultUPI["name"]["value"] + " " + resultUPI["surname"]["value"] + " (" + result["postCode"]["value"] + " " + result["city"]["value"] + ")")
 
     # ret is a stream with the results in XML, see <http://www.w3.org/TR/rdf-sparql-XMLres/>
     except Exception as err:
@@ -210,11 +233,11 @@ def queryWikidataDereferencing(UPIEndpoint) :
         PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
         SELECT ?wikiUrl WHERE {
         ?person rdfs:seeAlso ?wikiUrl .
-        }    
+        }  LIMIT 8  
         """
 
-    print("\nWIKIDATA DEREFERENCING")
-    print("========================")
+    print("\nWIKIDATA DEREFERENCING (max 8 results)")
+    print("========================================")
     
     sparqlUPI = SPARQLWrapper(UPIEndpoint)
 
@@ -283,7 +306,7 @@ if __name__ == "__main__":
 
     print("\nExecution durations:")
     print("=====================")
-    print("Federated query:         ", federatedQueryDuration)
-    print("2 queries:               ", twoQueriesDuration)
-    print("Multiple queries:        ", multipleQueriesDuration)
-    print("Wikidata dereferencing:  ", wikidataDereferencingDuration)
+    print("Federated query:                         ", federatedQueryDuration)
+    print("2 queries:                               ", twoQueriesDuration)
+    print("Multiple queries:                        ", multipleQueriesDuration)
+    print("Wikidata dereferencing (max 8 results)   ", wikidataDereferencingDuration)
