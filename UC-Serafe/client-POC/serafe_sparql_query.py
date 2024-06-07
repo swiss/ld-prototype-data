@@ -1,17 +1,24 @@
 """
 Prototyp Linked master Data - BK
 Serafe use-case
+Author: Fabian Cretton - HES-SO Valais/Wallis - Institut Informatique Sierre
+
 Testing a few ways to run SPARQL queries over different SPARQL endpoints
 
 Code based on Python's RDFLib that must be installed
+    Code: https://github.com/RDFLib/rdflib
+    Documentation: https://rdflib.readthedocs.io/en/stable/
 
 To run this code, two SPARQL endpoints must be up and running:
     - EWR endpoint
     - UPI endpoint
     This folder contains little datasets as .ttl files, one for EWR and one for UPI
     Those .ttl files can be uploaded in a SPARQL endpoint, see the startEWR.sh and startUPI.sh scripts
-Then pass the endpoints URLs to this script with the 2 command line parameters:
-    --ewr_endpoint=http://localhost:8000/", "--upi_endpoint=http://localhost:8001/"
+
+Then script is started with 3 command line parameters: the queries to run and the endpoints URLs:
+    --queryNumber=5 --ewr_endpoint=http://localhost:8000/, --upi_endpoint=http://localhost:8001/
+
+    queryNumber possible values: 1-Federated 2-Two queries 3-Multiple queries 4-Wikidata dereferencing 5-All queries
 """
 
 import logging
@@ -204,10 +211,9 @@ def queryEndPointsOneQueryPerPerson(EWREndpoint, UPIEndpoint) :
         print("EWR query results: "  + str(len(results["results"]["bindings"])))
 
         for result in results["results"]["bindings"]:
-            #print(result["person"]["value"])
+            print("UPI query for " + result["person"]["value"])
             personURL = "<" + result["person"]["value"] + ">"
             queryStringUPIFinal = queryStringUPI.replace("PERSON_URI_TO_REPLACE", personURL)   
-            #print("New query with person URL:" + queryStringUPIFinal)
             sparqlUPI.setQuery(queryStringUPIFinal)
             sparqlUPI.setReturnFormat(JSON)
             resultsUPI = sparqlUPI.query().convert()
@@ -287,37 +293,38 @@ if __name__ == "__main__":
     print(args) 
     print()
     
-    #queryLocalFile()
+    # Not used currently:
+    # A basic example to run a SPARQL query over a file content, without triple store
+    # queryLocalFile()
+
+    executionDurations = ""
+
+    # Run a specific query (1 to 4) or all queries (5)
     if args.queryNumber == "1" or args.queryNumber == "5":
         start_time = time.time()
         queryEndPointsOneFederatedQuery(args.ewr_endpoint, args.upi_endpoint)
         federatedQueryDuration = round(time.time() - start_time, 2)
+        executionDurations += "One federated query:                                         " + str(round(time.time() - start_time, 2)) + "\n"
 
     if args.queryNumber == "2" or args.queryNumber == "5":
         start_time = time.time()
         queryEndPointsTwoQueries(args.ewr_endpoint, args.upi_endpoint)
         twoQueriesDuration = round(time.time() - start_time, 2)
+        executionDurations += "One query to EWR and one query to UPI                        " + str(round(time.time() - start_time, 2)) + "\n"
 
     if args.queryNumber == "3" or args.queryNumber == "5":
         start_time = time.time()
         queryEndPointsOneQueryPerPerson(args.ewr_endpoint, args.upi_endpoint)
         multipleQueriesDuration = round(time.time() - start_time, 2)
+        executionDurations += "One query to EWR and One query per person to UPI             " + str(round(time.time() - start_time, 2)) + "\n"
 
     if args.queryNumber == "4" or args.queryNumber == "5":
         start_time = time.time()
         queryWikidataDereferencing(args.upi_endpoint) 
         wikidataDereferencingDuration = round(time.time() - start_time, 2)
+        executionDurations += "One query to EWR and one http request per person to Wikidata " + str(round(time.time() - start_time, 2)) + "\n"
 
+    # Print the execution durations at the end of the script
     print("\nExecution durations:")
     print("=====================")
-    if args.queryNumber == "1" or args.queryNumber == "5":
-        print("Federated query:                         ", federatedQueryDuration)
-
-    if args.queryNumber == "2" or args.queryNumber == "5":
-        print("2 queries:                               ", twoQueriesDuration)
-
-    if args.queryNumber == "3" or args.queryNumber == "5":
-        print("Multiple queries:                        ", multipleQueriesDuration)
-
-    if args.queryNumber == "4" or args.queryNumber == "5": 
-        print("Wikidata dereferencing (max 8 results)   ", wikidataDereferencingDuration)
+    print(executionDurations)
