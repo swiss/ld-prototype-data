@@ -272,6 +272,7 @@ if __name__ == "__main__":
     # read command line arguments
     parser=argparse.ArgumentParser()
 
+    parser.add_argument("--queryNumber", help="Please give the query number: 1-Federated 2-Two queries 3-Multiple queries 4-Wikidata dereferencing 5-All queries")
     parser.add_argument("--ewr_endpoint", help="Please give the SPARQL endpoint for EWR")
     parser.add_argument("--upi_endpoint", help="Please give the SPARQL endpoint for UPI")
 
@@ -287,26 +288,36 @@ if __name__ == "__main__":
     print()
     
     #queryLocalFile()
+    if args.queryNumber == "1" or args.queryNumber == "5":
+        start_time = time.time()
+        queryEndPointsOneFederatedQuery(args.ewr_endpoint, args.upi_endpoint)
+        federatedQueryDuration = round(time.time() - start_time, 2)
 
-    start_time = time.time()
-    queryEndPointsOneFederatedQuery(args.ewr_endpoint, args.upi_endpoint)
-    federatedQueryDuration = round(time.time() - start_time, 2)
+    if args.queryNumber == "2" or args.queryNumber == "5":
+        start_time = time.time()
+        queryEndPointsTwoQueries(args.ewr_endpoint, args.upi_endpoint)
+        twoQueriesDuration = round(time.time() - start_time, 2)
 
-    start_time = time.time()
-    queryEndPointsTwoQueries(args.ewr_endpoint, args.upi_endpoint)
-    twoQueriesDuration = round(time.time() - start_time, 2)
+    if args.queryNumber == "3" or args.queryNumber == "5":
+        start_time = time.time()
+        queryEndPointsOneQueryPerPerson(args.ewr_endpoint, args.upi_endpoint)
+        multipleQueriesDuration = round(time.time() - start_time, 2)
 
-    start_time = time.time()
-    queryEndPointsOneQueryPerPerson(args.ewr_endpoint, args.upi_endpoint)
-    multipleQueriesDuration = round(time.time() - start_time, 2)
-
-    start_time = time.time()
-    queryWikidataDereferencing(args.upi_endpoint) 
-    wikidataDereferencingDuration = round(time.time() - start_time, 2)
+    if args.queryNumber == "4" or args.queryNumber == "5":
+        start_time = time.time()
+        queryWikidataDereferencing(args.upi_endpoint) 
+        wikidataDereferencingDuration = round(time.time() - start_time, 2)
 
     print("\nExecution durations:")
     print("=====================")
-    print("Federated query:                         ", federatedQueryDuration)
-    print("2 queries:                               ", twoQueriesDuration)
-    print("Multiple queries:                        ", multipleQueriesDuration)
-    print("Wikidata dereferencing (max 8 results)   ", wikidataDereferencingDuration)
+    if args.queryNumber == "1" or args.queryNumber == "5":
+        print("Federated query:                         ", federatedQueryDuration)
+
+    if args.queryNumber == "2" or args.queryNumber == "5":
+        print("2 queries:                               ", twoQueriesDuration)
+
+    if args.queryNumber == "3" or args.queryNumber == "5":
+        print("Multiple queries:                        ", multipleQueriesDuration)
+
+    if args.queryNumber == "4" or args.queryNumber == "5": 
+        print("Wikidata dereferencing (max 8 results)   ", wikidataDereferencingDuration)

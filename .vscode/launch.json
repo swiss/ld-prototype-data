@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/UC-Serafe/client-POC/serafe_sparql_query.py",
             "console": "integratedTerminal",
-            "args": ["--ewr_endpoint=http://localhost:8000/", "--upi_endpoint=http://localhost:8001/"],
+            "args": ["--queryNumber=5", "--ewr_endpoint=http://localhost:8000/", "--upi_endpoint=http://localhost:8001/"],
         }
     ]
 }
