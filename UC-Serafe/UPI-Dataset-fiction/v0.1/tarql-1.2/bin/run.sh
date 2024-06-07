@@ -1,0 +1,1 @@
+./tarql --delimiter semicolon mapping.sparql UPI_Personnes_fiction.csv > UPI_Personnes_fiction.ttl

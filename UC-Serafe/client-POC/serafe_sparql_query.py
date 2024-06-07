@@ -278,9 +278,9 @@ if __name__ == "__main__":
     # read command line arguments
     parser=argparse.ArgumentParser()
 
-    parser.add_argument("--queryNumber", help="Please give the query number: 1-Federated 2-Two queries 3-Multiple queries 4-Wikidata dereferencing 5-All queries")
-    parser.add_argument("--ewr_endpoint", help="Please give the SPARQL endpoint for EWR")
-    parser.add_argument("--upi_endpoint", help="Please give the SPARQL endpoint for UPI")
+    parser.add_argument("--queryNumber", help="A number for the query/ies to execute: 1-Federated 2-Two queries 3-Multiple queries 4-Wikidata dereferencing 5-All queries")
+    parser.add_argument("--ewr_endpoint", help="The SPARQL endpoint URL for EWR")
+    parser.add_argument("--upi_endpoint", help="The SPARQL endpoint URL for UPI")
 
     args=parser.parse_args()
 
