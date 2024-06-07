@@ -1,9 +1,9 @@
 # LD-Prototype-Data
 Currently contains: 
 - The [UPI dataset creation](UC-Serafe/UPI-Dataset-fiction) based on a [tarql](https://tarql.github.io/) script for the dataset of people's basic informations  
-    Tarql can be run on Windows or Linux with `run.bat` and `run.sh` respectively
+    Tarql can be run on Windows or Linux with `run.bat` and `run.sh` respectively (found [here](UC-Serafe/UPI-Dataset-fiction/v0.1/tarql-1.2/bin))  
 - The [EWR dataset creation](UC-Serafe/EWR-Dataset-fiction) based on a [tarql](https://tarql.github.io/) script for the dataset of people's principal residences  
-    Tarql can be run on Windows or Linux with `run.bat` and `run.sh` respectively
+    Tarql can be run on Windows or Linux with `run.bat` and `run.sh` respectively (found [here](UC-Serafe/EWR-Dataset-fiction/v0.1/tarql-1.2/bin))
 - The [Python POC](UC-Serafe/client-POC) with SPARQL queries to two local SPARQL endpoints (EWR and UPI) that can be easily launched locally  
     The Python code relies on rdflib ([Code](https://github.com/RDFLib/rdflib) and [Documentation](https://rdflib.readthedocs.io/en/stable/))
 
