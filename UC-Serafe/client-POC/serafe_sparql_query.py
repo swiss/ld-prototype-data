@@ -86,8 +86,13 @@ def queryEndPointsOneFederatedQuery(EWREndpoint, UPIEndpoint) :
         results = sparql.query().convert()
 
         print("Query results: "  + str(len(results["results"]["bindings"])))
+
         for result in results["results"]["bindings"]:
-            print(result["name"]["value"] + " " + result["surname"]["value"] + " (" + result["postCode"]["value"] + " " + result["city"]["value"] + ")")
+            # handle OPTIONAL 'surname' value
+            if "surname" in result:
+                print(result["name"]["value"] + " " + result["surname"]["value"] + " (" + result["postCode"]["value"] + " " + result["city"]["value"] + ")")
+            else:
+                print(result["name"]["value"] + " [no available surname] (" + result["postCode"]["value"] + " " + result["city"]["value"] + ")")
 
     # ret is a stream with the results in XML, see <http://www.w3.org/TR/rdf-sparql-XMLres/>
     except Exception as err:
@@ -159,10 +164,18 @@ def queryEndPointsTwoQueries(EWREndpoint, UPIEndpoint) :
         print("\nUPI query results: " + str(len(results["results"]["bindings"])))
         for result in results["results"]["bindings"]:
             person = result["person"]["value"]
-            if person in arrayAddresses:
-                print(result["name"]["value"] + " " + result["surname"]["value"] + " (" +  arrayAddresses[person] + ")")
+
+            # handle OPTIONAL 'surname' value
+            if "surname" in result:
+                surnameValue = result["surname"]["value"] 
             else:
-                print(result["name"]["value"] + " " + result["surname"]["value"] + " (No available address)")
+                surnameValue = "[no available surname]"
+
+
+            if person in arrayAddresses:
+                print(result["name"]["value"] + " " + surnameValue + " (" +  arrayAddresses[person] + ")")
+            else:
+                print(result["name"]["value"] + " " + surnameValue + " (No available address)")
 
     # ret is a stream with the results in XML, see <http://www.w3.org/TR/rdf-sparql-XMLres/>
     except Exception as err:
@@ -219,7 +232,13 @@ def queryEndPointsOneQueryPerPerson(EWREndpoint, UPIEndpoint) :
             resultsUPI = sparqlUPI.query().convert()
             #print("UPI query results: "  + str(len(resultsUPI["results"]["bindings"])))
             for resultUPI in resultsUPI["results"]["bindings"]:
-                print(resultUPI["name"]["value"] + " " + resultUPI["surname"]["value"] + " (" + result["postCode"]["value"] + " " + result["city"]["value"] + ")")
+                # handle OPTIONAL 'surname' value
+                if "surname" in resultUPI:
+                    surnameValue = resultUPI["surname"]["value"] 
+                else:
+                    surnameValue = "[no available surname]"
+                    
+                print(resultUPI["name"]["value"] + " " + surnameValue + " (" + result["postCode"]["value"] + " " + result["city"]["value"] + ")")
 
     # ret is a stream with the results in XML, see <http://www.w3.org/TR/rdf-sparql-XMLres/>
     except Exception as err:
