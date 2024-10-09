@@ -1,0 +1,50 @@
+<http://example.com/avs_id/9791234567890> <http://purl.org/dc/terms/creator> <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-sozialversicherungen-bsv> .
+<http://example.com/avs_id/9791234567890> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#Identifier> .
+<http://example.com/avs_id/9791234567890> <http://www.w3.org/2000/01/rdf-schema#label> "AHV-Nummer"@de .
+<http://example.com/avs_id/9791234567890> <http://www.w3.org/ns/adms#schemeAgency> "Bundesamt für Sozialversicherungen BSV"@de .
+<http://example.com/avs_id/9792222222222> <http://purl.org/dc/terms/creator> <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-sozialversicherungen-bsv> .
+<http://example.com/avs_id/9792222222222> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#Identifier> .
+<http://example.com/avs_id/9792222222222> <http://www.w3.org/2000/01/rdf-schema#label> "AHV-Nummer"@de .
+<http://example.com/avs_id/9792222222222> <http://www.w3.org/ns/adms#schemeAgency> "Bundesamt für Sozialversicherungen BSV"@de .
+<http://example.com/avs_id/9793333333333> <http://purl.org/dc/terms/creator> <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-sozialversicherungen-bsv> .
+<http://example.com/avs_id/9793333333333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#Identifier> .
+<http://example.com/avs_id/9793333333333> <http://www.w3.org/2000/01/rdf-schema#label> "AHV-Nummer"@de .
+<http://example.com/avs_id/9793333333333> <http://www.w3.org/ns/adms#schemeAgency> "Bundesamt für Sozialversicherungen BSV"@de .
+<http://example.com/avs_id/9795555555555> <http://purl.org/dc/terms/creator> <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-sozialversicherungen-bsv> .
+<http://example.com/avs_id/9795555555555> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#Identifier> .
+<http://example.com/avs_id/9795555555555> <http://www.w3.org/2000/01/rdf-schema#label> "AHV-Nummer"@de .
+<http://example.com/avs_id/9795555555555> <http://www.w3.org/ns/adms#schemeAgency> "Bundesamt für Sozialversicherungen BSV"@de .
+<http://example.com/avs_id/9799876543210> <http://purl.org/dc/terms/creator> <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-sozialversicherungen-bsv> .
+<http://example.com/avs_id/9799876543210> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#Identifier> .
+<http://example.com/avs_id/9799876543210> <http://www.w3.org/2000/01/rdf-schema#label> "AHV-Nummer"@de .
+<http://example.com/avs_id/9799876543210> <http://www.w3.org/ns/adms#schemeAgency> "Bundesamt für Sozialversicherungen BSV"@de .
+<http://example.com/person/9791234567890> <http://data.europa.eu/m8g/birthDate> "1990-05-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.com/person/9791234567890> <http://data.europa.eu/m8g/sex> <http://publications.europa.eu/resource/authority/human-sex/FEMALE> .
+<http://example.com/person/9791234567890> <http://purl.org/dc/terms/identifier> <http://example.com/avs_id/9791234567890> .
+<http://example.com/person/9791234567890> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/person#Person> .
+<http://example.com/person/9791234567890> <http://xmlns.com/foaf/0.1/familyName> "Parr" .
+<http://example.com/person/9791234567890> <http://xmlns.com/foaf/0.1/givenName> "Violet" .
+<http://example.com/person/9792222222222> <http://data.europa.eu/m8g/birthDate> "1975-02-03"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.com/person/9792222222222> <http://data.europa.eu/m8g/sex> <http://publications.europa.eu/resource/authority/human-sex/MALE> .
+<http://example.com/person/9792222222222> <http://purl.org/dc/terms/identifier> <http://example.com/avs_id/9792222222222> .
+<http://example.com/person/9792222222222> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/person#Person> .
+<http://example.com/person/9792222222222> <http://xmlns.com/foaf/0.1/familyName> "Parr" .
+<http://example.com/person/9792222222222> <http://xmlns.com/foaf/0.1/givenName> "Robert" .
+<http://example.com/person/9793333333333> <http://data.europa.eu/m8g/birthDate> "1992-03-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.com/person/9793333333333> <http://data.europa.eu/m8g/sex> <http://publications.europa.eu/resource/authority/human-sex/FEMALE> .
+<http://example.com/person/9793333333333> <http://purl.org/dc/terms/identifier> <http://example.com/avs_id/9793333333333> .
+<http://example.com/person/9793333333333> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/person#Person> .
+<http://example.com/person/9793333333333> <http://xmlns.com/foaf/0.1/familyName> "Porter" .
+<http://example.com/person/9793333333333> <http://xmlns.com/foaf/0.1/givenName> "Jane" .
+<http://example.com/person/9795555555555> <http://data.europa.eu/m8g/birthDate> "1993-07-23"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.com/person/9795555555555> <http://data.europa.eu/m8g/sex> <http://publications.europa.eu/resource/authority/human-sex/FEMALE> .
+<http://example.com/person/9795555555555> <http://purl.org/dc/terms/identifier> <http://example.com/avs_id/9795555555555> .
+<http://example.com/person/9795555555555> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/person#Person> .
+<http://example.com/person/9795555555555> <http://xmlns.com/foaf/0.1/familyName> "Corona" .
+<http://example.com/person/9795555555555> <http://xmlns.com/foaf/0.1/givenName> "Rapunzel" .
+<http://example.com/person/9799876543210> <http://data.europa.eu/m8g/birthDate> "1985-10-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.com/person/9799876543210> <http://data.europa.eu/m8g/sex> <http://publications.europa.eu/resource/authority/human-sex/MALE> .
+<http://example.com/person/9799876543210> <http://purl.org/dc/terms/identifier> <http://example.com/avs_id/9799876543210> .
+<http://example.com/person/9799876543210> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/person#Person> .
+<http://example.com/person/9799876543210> <http://xmlns.com/foaf/0.1/familyName> "Sullivan" .
+<http://example.com/person/9799876543210> <http://xmlns.com/foaf/0.1/givenName> "James" .

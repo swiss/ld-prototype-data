@@ -1,0 +1,90 @@
+@prefix adms:              <http://www.w3.org/ns/adms#> .
+@prefix cv:                <http://data.europa.eu/m8g/> .
+@prefix dct:               <http://purl.org/dc/terms/> .
+@prefix example-avs-id:    <http://example.com/avs_id/> .
+@prefix example-person:    <http://example.com/person/> .
+@prefix foaf:              <http://xmlns.com/foaf/0.1/> .
+@prefix fun:               <http://w3id.org/sparql-generate/fn/> .
+@prefix human-sex:         <http://publications.europa.eu/resource/authority/human-sex/> .
+@prefix iter:              <http://w3id.org/sparql-generate/iter/> .
+@prefix opendataswiss-org: <https://register.ld.admin.ch/opendataswiss/org/> .
+@prefix person:            <http://www.w3.org/ns/person#> .
+@prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:              <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml:               <http://www.w3.org/2007/ont/xmlschema#> .
+@prefix xsd:               <http://www.w3.org/2001/XMLSchema#> .
+
+example-person:9791234567890
+        a                person:Person;
+        cv:birthDate     "1990-05-15"^^xsd:date;
+        cv:sex           human-sex:FEMALE;
+        dct:identifier   example-avs-id:9791234567890;
+        foaf:familyName  "Parr";
+        foaf:givenName   "Violet" .
+
+example-person:9793333333333
+        a                person:Person;
+        cv:birthDate     "1992-03-21"^^xsd:date;
+        cv:sex           human-sex:FEMALE;
+        dct:identifier   example-avs-id:9793333333333;
+        foaf:familyName  "Porter";
+        foaf:givenName   "Jane" .
+
+example-person:9795555555555
+        a                person:Person;
+        cv:birthDate     "1993-07-23"^^xsd:date;
+        cv:sex           human-sex:FEMALE;
+        dct:identifier   example-avs-id:9795555555555;
+        foaf:familyName  "Corona";
+        foaf:givenName   "Rapunzel" .
+
+example-avs-id:9799876543210
+        a                  adms:Identifier;
+        rdfs:label         "AHV-Nummer"@de;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv;
+        skos:notation      "9799876543210";
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de .
+
+example-person:9799876543210
+        a                person:Person;
+        cv:birthDate     "1985-10-12"^^xsd:date;
+        cv:sex           human-sex:MALE;
+        dct:identifier   example-avs-id:9799876543210;
+        foaf:familyName  "Sullivan";
+        foaf:givenName   "James" .
+
+example-person:9792222222222
+        a                person:Person;
+        cv:birthDate     "1975-02-03"^^xsd:date;
+        cv:sex           human-sex:MALE;
+        dct:identifier   example-avs-id:9792222222222;
+        foaf:familyName  "Parr";
+        foaf:givenName   "Robert" .
+
+example-avs-id:9791234567890
+        a                  adms:Identifier;
+        rdfs:label         "AHV-Nummer"@de;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv;
+        skos:notation      "9791234567890";
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de .
+
+example-avs-id:9793333333333
+        a                  adms:Identifier;
+        rdfs:label         "AHV-Nummer"@de;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv;
+        skos:notation      "9793333333333";
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de .
+
+example-avs-id:9795555555555
+        a                  adms:Identifier;
+        rdfs:label         "AHV-Nummer"@de;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv;
+        skos:notation      "9795555555555";
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de .
+
+example-avs-id:9792222222222
+        a                  adms:Identifier;
+        rdfs:label         "AHV-Nummer"@de;
+        dct:creator        opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv;
+        skos:notation      "9792222222222";
+        adms:schemeAgency  "Bundesamt für Sozialversicherungen BSV"@de .

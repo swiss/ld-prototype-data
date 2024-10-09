@@ -1,0 +1,45 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+PREFIX fun: <http://w3id.org/sparql-generate/fn/>
+PREFIX xml: <http://www.w3.org/2007/ont/xmlschema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX example-person: <http://example.com/person/>
+PREFIX example-avs-id: <http://example.com/avs_id/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX cv: <http://data.europa.eu/m8g/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX person: <http://www.w3.org/ns/person#>
+PREFIX human-sex: <http://publications.europa.eu/resource/authority/human-sex/>
+PREFIX opendataswiss-org: <https://register.ld.admin.ch/opendataswiss/org/>
+
+GENERATE {
+	?pers a person:Person;
+		foaf:familyName ?name ;
+		foaf:givenName ?givenName ;
+		cv:birthDate ?birthDateAsDate ;
+		dct:identifier ?avsIdentifierURL ;
+		cv:sex ?sexURL .
+		
+	?avsIdentifierURL a adms:Identifier ;
+		adms:schemeAgency "Bundesamt für Sozialversicherungen BSV"@de ;
+		rdfs:label "AHV-Nummer"@de ;
+		dct:creator opendataswiss-org:bundesamt-fur-sozialversicherungen-bsv ;
+		skos:notation ?AVSNrStr .	
+}
+SOURCE <SOURCE_FILE> AS ?xml
+ITERATOR iter:XPath(?xml, "//personidentification") AS ?person
+WHERE {
+  BIND (fun:XPath(?person, "/personidentification/vn/text()") AS ?AVSNr)
+  BIND (URI(CONCAT('http://example.com/person/', STR(?AVSNr))) AS ?pers)
+  BIND (URI(CONCAT('http://example.com/avs_id/', STR(?AVSNr))) AS ?avsIdentifierURL)
+  BIND (STR(?AVSNr) as ?AVSNrStr)
+  BIND (fun:XPath(?person, "/personidentification/officialname/text()") AS ?name)
+  BIND (fun:XPath(?person, "/personidentification/firstname/text()") AS ?givenName)
+  BIND (fun:XPath(?person, "/personidentification/dateofbirth/yearmonthday/text()") AS ?birthDate)
+  BIND (xsd:date(?birthDate) as ?birthDateAsDate)
+  BIND (fun:XPath(?person, "/personidentification/sex/text()") AS ?sex)
+  BIND (URI(IF(?sex = "1", "http://publications.europa.eu/resource/authority/human-sex/MALE", "http://publications.europa.eu/resource/authority/human-sex/FEMALE")) as ?sexURL)
+}
+
