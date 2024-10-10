@@ -34,3 +34,21 @@ See the documentation of the tool about its installation that might require [nod
 
 Both examples contain a `run.sh` to transform the file persons-eCH0044.xml. It is the same XML file in both examples, that contains 5 fictional caracters as a complement to the UPI dataset generated here above.  
 More information will be given about those tools soon.
+
+
+## Data validation - SHACL
+RDF data can be validated with the [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/).  
+  
+The generated UPI and EWR datasets, presented here above, are based and the SEMIC ontologies and can be validated with their provided SHACL files:  
+- UPI dataset based on the [Core Person Vocabulary](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/), find the SHACL file [here](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#shacl).  
+- EWR dataset based on the [Core Criterion and Core Evidence Vocabulary](https://semiceu.github.io/CCCEV/releases/2.1.0/), find the SHACL file [here](https://semiceu.github.io/CCCEV/releases/2.1.0/#validation).  
+
+To run the SHACL validation we use the [Apache Jena implementation](https://jena.apache.org/download/index.cgi) (Apache Jena Commands, version 5.1.0).  
+  
+The [shacl](shacl) folder contains the necessary tools and files to perform the SHACL validation:  
+- The Jena tool unzipped in the `apache-jena-5.1.0` sub-folder   
+- The two generated datasets  `UPI_Personnes_fiction.ttl` and `EWR_ResidencesPrincipales.ttl`  
+- The SHACL files `core-person-ap-SHACL.ttl` and `cccev-ap-SHACL.ttl`  
+Note: the `cccev-ap-SHACL.ttl` was adapted to `cccev-ap-SHACL_corrected.ttl` to avoid mixing http and https URLs for the time ontology
+- `runUPI.sh` and `runEWR.sh` to execute the SHACL validation  
+

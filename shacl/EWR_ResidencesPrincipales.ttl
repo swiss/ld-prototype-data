@@ -1,0 +1,861 @@
+@prefix example-ewr-mv-pr:  <http://example.com/ewr/mv/principal_residence/be/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix example-ewr-mv-pr-adr:  <http://example.com/ewr/mv/principal_residence/be/address/> .
+@prefix cv:  <http://data.europa.eu/m8g/> .
+@prefix ex:  <http://example.com/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix person:  <http://www.w3.org/ns/person#> .
+@prefix example-person:  <http://example.com/person/> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix locn:  <http://www.w3.org/ns/locn#> .
+@prefix example-ewr-mv:  <http://example.com/ewr/mv/be/> .
+@prefix example-ewr:  <http://example.com/ewr/> .
+@prefix example-ewr-mv-validity-period:  <http://example.com/ewr/mv/be/validity_period/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+example-person:7565626146561
+        rdf:type  foaf:Agent .
+
+example-ewr:bern  rdf:type  foaf:Agent .
+
+ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence
+        rdf:type  cv:EvidenceType .
+
+example-ewr-mv-pr:1234567890
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7565626146561 ;
+        dct:issued            "1945-08-15"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "1234567890" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:1234567890 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:1234567890 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:1234567890
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Rue de la Montagne" ;
+        locn:locatorDesignator  "14" ;
+        locn:postCode           "3000" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:1234567890
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b0 .
+
+_:b0    time:inXSDDate  "1945-08-15"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:1234567890
+        time:hasEnd  _:b1 .
+
+_:b1    time:inXSDDate  "1953-10-20"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7563797564085
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:2345678901
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7563797564085 ;
+        dct:issued            "1998-04-22"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "2345678901" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:2345678901 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:2345678901 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:2345678901
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Avenue de la Liberté" ;
+        locn:locatorDesignator  "32" ;
+        locn:postCode           "3010" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:2345678901
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b2 .
+
+_:b2    time:inXSDDate  "1998-04-22"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:2345678901
+        time:hasEnd  _:b3 .
+
+_:b3    time:inXSDDate  "2009-06-18"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7566939230183
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:3456789012
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7566939230183 ;
+        dct:issued            "1950-11-07"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "3456789012" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:3456789012 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:3456789012 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:3456789012
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Boulevard des Alpes" ;
+        locn:locatorDesignator  "7" ;
+        locn:postCode           "3020" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:3456789012
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b4 .
+
+_:b4    time:inXSDDate  "1950-11-07"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:3456789012
+        time:hasEnd  _:b5 .
+
+_:b5    time:inXSDDate  "1959-12-03"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7566422590732
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:4567890123
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7566422590732 ;
+        dct:issued            "2005-09-18"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "4567890123" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:4567890123 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:4567890123 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:4567890123
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Place du Marché" ;
+        locn:locatorDesignator  "5" ;
+        locn:postCode           "3030" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:4567890123
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b6 .
+
+_:b6    time:inXSDDate  "2005-09-18"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:4567890123
+        time:hasEnd  _:b7 .
+
+_:b7    time:inXSDDate  "2008-11-29"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7569468062614
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:5678901234
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7569468062614 ;
+        dct:issued            "1994-12-30"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "5678901234" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:5678901234 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:5678901234 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:5678901234
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Rue de la Paix" ;
+        locn:locatorDesignator  "21" ;
+        locn:postCode           "3040" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:5678901234
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b8 .
+
+_:b8    time:inXSDDate  "1994-12-30"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:5678901234
+        time:hasEnd  _:b9 .
+
+_:b9    time:inXSDDate  "2006-05-12"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7565691946349
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:6789012345
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7565691946349 ;
+        dct:issued            "2008-07-03"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "6789012345" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:6789012345 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:6789012345 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:6789012345
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Avenue des Fleurs" ;
+        locn:locatorDesignator  "10" ;
+        locn:postCode           "3050" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:6789012345
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b10 .
+
+_:b10   time:inXSDDate  "2008-07-03"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:6789012345
+        time:hasEnd  _:b11 .
+
+_:b11   time:inXSDDate  "2010-02-15"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7564934397498
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:7890123456
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7564934397498 ;
+        dct:issued            "1999-10-11"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "7890123456" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:7890123456 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:7890123456 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:7890123456
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Rue des Champs" ;
+        locn:locatorDesignator  "3" ;
+        locn:postCode           "3060" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:7890123456
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b12 .
+
+_:b12   time:inXSDDate  "1999-10-11"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:7890123456
+        time:hasEnd  _:b13 .
+
+_:b13   time:inXSDDate  "2004-09-07"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7563038909224
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:8901234567
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7563038909224 ;
+        dct:issued            "2007-02-28"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "8901234567" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:8901234567 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:8901234567 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:8901234567
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Boulevard de l'Europe" ;
+        locn:locatorDesignator  "88" ;
+        locn:postCode           "3070" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:8901234567
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b14 .
+
+_:b14   time:inXSDDate  "2007-02-28"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:8901234567
+        time:hasEnd  _:b15 .
+
+_:b15   time:inXSDDate  "2010-11-24"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7561230860077
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:9012345678
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7561230860077 ;
+        dct:issued            "2001-06-14"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "9012345678" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:9012345678 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:9012345678 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:9012345678
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Place de la Gare" ;
+        locn:locatorDesignator  "15" ;
+        locn:postCode           "3080" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:9012345678
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b16 .
+
+_:b16   time:inXSDDate  "2001-06-14"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:9012345678
+        time:hasEnd  _:b17 .
+
+_:b17   time:inXSDDate  "2009-08-30"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7562378067595
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:123456789
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7562378067595 ;
+        dct:issued            "1997-03-25"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "123456789" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:123456789 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:123456789 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:123456789
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Rue du Lac" ;
+        locn:locatorDesignator  "42" ;
+        locn:postCode           "3090" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:123456789
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b18 .
+
+_:b18   time:inXSDDate  "1997-03-25"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:123456789
+        time:hasEnd  _:b19 .
+
+_:b19   time:inXSDDate  "2005-04-19"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7562186711192
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:9876543210
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7562186711192 ;
+        dct:issued            "2009-12-05"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "9876543210" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:9876543210 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:9876543210 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:9876543210
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Avenue du Soleil" ;
+        locn:locatorDesignator  "77" ;
+        locn:postCode           "3100" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:9876543210
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b20 .
+
+_:b20   time:inXSDDate  "2009-12-05"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:9876543210
+        time:hasEnd  _:b21 .
+
+_:b21   time:inXSDDate  "2010-10-10"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7564098604807
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:8765432109
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7564098604807 ;
+        dct:issued            "2004-08-19"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "8765432109" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:8765432109 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:8765432109 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:8765432109
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Chemin des Érables" ;
+        locn:locatorDesignator  "25" ;
+        locn:postCode           "3110" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:8765432109
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b22 .
+
+_:b22   time:inXSDDate  "2004-08-19"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:8765432109
+        time:hasEnd  _:b23 .
+
+_:b23   time:inXSDDate  "2010-03-27"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7568849389654
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:7654321098
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7568849389654 ;
+        dct:issued            "2000-01-10"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "7654321098" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:7654321098 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:7654321098 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:7654321098
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Rue des Roses" ;
+        locn:locatorDesignator  "6" ;
+        locn:postCode           "3120" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:7654321098
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b24 .
+
+_:b24   time:inXSDDate  "2000-01-10"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:7654321098
+        time:hasEnd  _:b25 .
+
+_:b25   time:inXSDDate  "2007-07-02"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7565949876756
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:6543210987
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7565949876756 ;
+        dct:issued            "2010-07-28"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "6543210987" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:6543210987 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:6543210987 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:6543210987
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Boulevard des Arts" ;
+        locn:locatorDesignator  "19" ;
+        locn:postCode           "3130" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:6543210987
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b26 .
+
+_:b26   time:inXSDDate  "2010-07-28"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:6543210987
+        time:hasEnd  _:b27 .
+
+_:b27   time:inXSDDate  "2015-11-14"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7565554356834
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:5432109876
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7565554356834 ;
+        dct:issued            "2003-10-02"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "5432109876" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:5432109876 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:5432109876 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:5432109876
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Place de la Cathédrale" ;
+        locn:locatorDesignator  "3" ;
+        locn:postCode           "3140" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:5432109876
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b28 .
+
+_:b28   time:inXSDDate  "2003-10-02"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:5432109876
+        time:hasEnd  _:b29 .
+
+_:b29   time:inXSDDate  "2010-09-08"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7563100078216
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:4321098765
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7563100078216 ;
+        dct:issued            "2015-05-14"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "4321098765" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:4321098765 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:4321098765 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:4321098765
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Rue des Vignes" ;
+        locn:locatorDesignator  "8" ;
+        locn:postCode           "3150" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:4321098765
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b30 .
+
+_:b30   time:inXSDDate  "2015-05-14"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:4321098765
+        time:hasEnd  _:b31 .
+
+_:b31   time:inXSDDate  "2020-01-25"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7563429487423
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:3210987654
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7563429487423 ;
+        dct:issued            "2013-04-17"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "3210987654" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:3210987654 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:3210987654 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:3210987654
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Avenue de la République" ;
+        locn:locatorDesignator  "11" ;
+        locn:postCode           "3160" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:3210987654
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b32 .
+
+_:b32   time:inXSDDate  "2013-04-17"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:3210987654
+        time:hasEnd  _:b33 .
+
+_:b33   time:inXSDDate  "2019-04-30"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7564386875681
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:2109876543
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7564386875681 ;
+        dct:issued            "2016-09-29"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "2109876543" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:2109876543 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:2109876543 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:2109876543
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Chemin du Moulin" ;
+        locn:locatorDesignator  "2" ;
+        locn:postCode           "3170" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:2109876543
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b34 .
+
+_:b34   time:inXSDDate  "2016-09-29"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:2109876543
+        time:hasEnd  _:b35 .
+
+_:b35   time:inXSDDate  "2018-09-29"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7561256952909
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:1098765432
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7561256952909 ;
+        dct:issued            "2016-10-14"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "1098765432" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:1098765432 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:1098765432 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:1098765432
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Rue de la Croix" ;
+        locn:locatorDesignator  "30" ;
+        locn:postCode           "3180" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:1098765432
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b36 .
+
+_:b36   time:inXSDDate  "2016-10-14"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:1098765432
+        time:hasEnd  _:b37 .
+
+_:b37   time:inXSDDate  "2019-10-14"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7562907209281
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:987654321
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7562907209281 ;
+        dct:issued            "2019-07-02"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "987654321" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:987654321 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:987654321 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:987654321
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Boulevard de la Plage" ;
+        locn:locatorDesignator  "14" ;
+        locn:postCode           "3190" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:987654321
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b38 .
+
+_:b38   time:inXSDDate  "2019-07-02"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:987654321
+        time:hasEnd  _:b39 .
+
+_:b39   time:inXSDDate  "2019-10-02"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7560605260238
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:9876543211
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7560605260238 ;
+        dct:issued            "1932-06-06"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "9876543211" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:9876543211 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:9876543211 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:9876543211
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Place du Palais" ;
+        locn:locatorDesignator  "9" ;
+        locn:postCode           "3200" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:9876543211
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b40 .
+
+_:b40   time:inXSDDate  "1932-06-06"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:9876543211
+        time:hasEnd  _:b41 .
+
+_:b41   time:inXSDDate  "1942-06-06"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7562629102143
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:8765432108
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7562629102143 ;
+        dct:issued            "2004-03-08"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "8765432108" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:8765432108 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:8765432108 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:8765432108
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Rue du Paradis" ;
+        locn:locatorDesignator  "20" ;
+        locn:postCode           "3210" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:8765432108
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b42 .
+
+_:b42   time:inXSDDate  "2004-03-08"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:8765432108
+        time:hasEnd  _:b43 .
+
+_:b43   time:inXSDDate  "2010-08-14"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7562966486647
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:7654321095
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7562966486647 ;
+        dct:issued            "1996-12-31"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "7654321095" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:7654321095 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:7654321095 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:7654321095
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Avenue des Cèdres" ;
+        locn:locatorDesignator  "6" ;
+        locn:postCode           "3220" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:7654321095
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b44 .
+
+_:b44   time:inXSDDate  "1996-12-31"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:7654321095
+        time:hasEnd  _:b45 .
+
+_:b45   time:inXSDDate  "2002-03-06"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-person:7569629683115
+        rdf:type  foaf:Agent .
+
+example-ewr-mv-pr:6543210984
+        rdf:type              cv:Evidence ;
+        dct:publisher         example-ewr:bern ;
+        dct:conformsTo        ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
+        dct:subject           example-person:7569629683115 ;
+        dct:issued            "2010-03-31"^^xsd:date ;
+        dct:type              ex:EWRMeldeverhaeltnisPrincipalResidence ;
+        dct:identifier        "6543210984" ;
+        cv:validityPeriod     example-ewr-mv-validity-period:6543210984 ;
+        cv:registeredAddress  example-ewr-mv-pr-adr:6543210984 ;
+        dct:title             "Meldeverhältnis Résidence principale" .
+
+example-ewr-mv-pr-adr:6543210984
+        rdf:type                locn:Address ;
+        locn:thoroughfare       "Chemin de la Montagne" ;
+        locn:locatorDesignator  "18" ;
+        locn:postCode           "3230" ;
+        locn:postName           "Berne" .
+
+example-ewr-mv-validity-period:6543210984
+        rdf:type           time:ProperInterval ;
+        time:hasBeginning  _:b46 .
+
+_:b46   time:inXSDDate  "2010-03-31"^^xsd:date ;
+        rdf:type        time:Instant .
+
+example-ewr-mv-validity-period:6543210984
+        time:hasEnd  _:b47 .
+
+_:b47   time:inXSDDate  "2013-03-31"^^xsd:date ;
+        rdf:type        time:Instant .
