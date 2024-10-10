@@ -347,3 +347,4 @@ if __name__ == "__main__":
     print("\nExecution durations:")
     print("=====================")
     print(executionDurations)
+    print("IMPORTANT: those durations are only informative.\nMoreover, the very first query sent to a triple store can induce a triple store warm-up.\nTherefore, just after the launch of the triple store, please run the test twice to avoid a longer execution time for the first query.")
