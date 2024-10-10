@@ -1,0 +1,1 @@
+tarql --delimiter semicolon --dedup 5000 mapping.sparql UPI_Personnes_fiction.csv > UPI_Personnes_fiction.ttl

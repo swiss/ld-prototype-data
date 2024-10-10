@@ -2,7 +2,6 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix example-ewr-mv-pr-adr:  <http://example.com/ewr/mv/principal_residence/be/address/> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cv:  <http://data.europa.eu/m8g/> .
 @prefix ex:  <http://example.com/> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -15,6 +14,14 @@
 @prefix example-ewr:  <http://example.com/ewr/> .
 @prefix example-ewr-mv-validity-period:  <http://example.com/ewr/mv/be/validity_period/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+example-person:7565626146561
+        rdf:type  foaf:Agent .
+
+example-ewr:bern  rdf:type  foaf:Agent .
+
+ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence
+        rdf:type  cv:EvidenceType .
 
 example-ewr-mv-pr:1234567890
         rdf:type              cv:Evidence ;
@@ -48,6 +55,9 @@ example-ewr-mv-validity-period:1234567890
 _:b1    time:inXSDDate  "1953-10-20"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7563797564085
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:2345678901
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -79,6 +89,9 @@ example-ewr-mv-validity-period:2345678901
 
 _:b3    time:inXSDDate  "2009-06-18"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7566939230183
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:3456789012
         rdf:type              cv:Evidence ;
@@ -112,6 +125,9 @@ example-ewr-mv-validity-period:3456789012
 _:b5    time:inXSDDate  "1959-12-03"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7566422590732
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:4567890123
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -143,6 +159,9 @@ example-ewr-mv-validity-period:4567890123
 
 _:b7    time:inXSDDate  "2008-11-29"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7569468062614
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:5678901234
         rdf:type              cv:Evidence ;
@@ -176,6 +195,9 @@ example-ewr-mv-validity-period:5678901234
 _:b9    time:inXSDDate  "2006-05-12"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7565691946349
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:6789012345
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -207,6 +229,9 @@ example-ewr-mv-validity-period:6789012345
 
 _:b11   time:inXSDDate  "2010-02-15"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7564934397498
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:7890123456
         rdf:type              cv:Evidence ;
@@ -240,6 +265,9 @@ example-ewr-mv-validity-period:7890123456
 _:b13   time:inXSDDate  "2004-09-07"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7563038909224
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:8901234567
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -271,6 +299,9 @@ example-ewr-mv-validity-period:8901234567
 
 _:b15   time:inXSDDate  "2010-11-24"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7561230860077
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:9012345678
         rdf:type              cv:Evidence ;
@@ -304,6 +335,9 @@ example-ewr-mv-validity-period:9012345678
 _:b17   time:inXSDDate  "2009-08-30"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7562378067595
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:123456789
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -335,6 +369,9 @@ example-ewr-mv-validity-period:123456789
 
 _:b19   time:inXSDDate  "2005-04-19"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7562186711192
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:9876543210
         rdf:type              cv:Evidence ;
@@ -368,6 +405,9 @@ example-ewr-mv-validity-period:9876543210
 _:b21   time:inXSDDate  "2010-10-10"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7564098604807
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:8765432109
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -399,6 +439,9 @@ example-ewr-mv-validity-period:8765432109
 
 _:b23   time:inXSDDate  "2010-03-27"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7568849389654
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:7654321098
         rdf:type              cv:Evidence ;
@@ -432,6 +475,9 @@ example-ewr-mv-validity-period:7654321098
 _:b25   time:inXSDDate  "2007-07-02"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7565949876756
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:6543210987
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -463,6 +509,9 @@ example-ewr-mv-validity-period:6543210987
 
 _:b27   time:inXSDDate  "2015-11-14"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7565554356834
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:5432109876
         rdf:type              cv:Evidence ;
@@ -496,6 +545,9 @@ example-ewr-mv-validity-period:5432109876
 _:b29   time:inXSDDate  "2010-09-08"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7563100078216
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:4321098765
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -527,6 +579,9 @@ example-ewr-mv-validity-period:4321098765
 
 _:b31   time:inXSDDate  "2020-01-25"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7563429487423
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:3210987654
         rdf:type              cv:Evidence ;
@@ -560,6 +615,9 @@ example-ewr-mv-validity-period:3210987654
 _:b33   time:inXSDDate  "2019-04-30"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7564386875681
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:2109876543
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -591,6 +649,9 @@ example-ewr-mv-validity-period:2109876543
 
 _:b35   time:inXSDDate  "2018-09-29"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7561256952909
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:1098765432
         rdf:type              cv:Evidence ;
@@ -624,6 +685,9 @@ example-ewr-mv-validity-period:1098765432
 _:b37   time:inXSDDate  "2019-10-14"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7562907209281
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:987654321
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -655,6 +719,9 @@ example-ewr-mv-validity-period:987654321
 
 _:b39   time:inXSDDate  "2019-10-02"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7560605260238
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:9876543211
         rdf:type              cv:Evidence ;
@@ -688,6 +755,9 @@ example-ewr-mv-validity-period:9876543211
 _:b41   time:inXSDDate  "1942-06-06"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7562629102143
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:8765432108
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -720,6 +790,9 @@ example-ewr-mv-validity-period:8765432108
 _:b43   time:inXSDDate  "2010-08-14"^^xsd:date ;
         rdf:type        time:Instant .
 
+example-person:7562966486647
+        rdf:type  foaf:Agent .
+
 example-ewr-mv-pr:7654321095
         rdf:type              cv:Evidence ;
         dct:publisher         example-ewr:bern ;
@@ -751,6 +824,9 @@ example-ewr-mv-validity-period:7654321095
 
 _:b45   time:inXSDDate  "2002-03-06"^^xsd:date ;
         rdf:type        time:Instant .
+
+example-person:7569629683115
+        rdf:type  foaf:Agent .
 
 example-ewr-mv-pr:6543210984
         rdf:type              cv:Evidence ;

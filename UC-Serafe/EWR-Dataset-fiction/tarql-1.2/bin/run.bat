@@ -1,0 +1,1 @@
+tarql --delimiter semicolon --dedup 5000 mapping.sparql EWR_ResidencesPrincipales.csv > EWR_ResidencesPrincipales.ttl

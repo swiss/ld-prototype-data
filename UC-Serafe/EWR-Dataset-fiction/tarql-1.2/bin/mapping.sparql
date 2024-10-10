@@ -1,12 +1,10 @@
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix cv: <http://data.europa.eu/m8g/>
 prefix dct: <http://purl.org/dc/terms/>
 prefix locn: <http://www.w3.org/ns/locn#>
 prefix person: <http://www.w3.org/ns/person#>
 prefix time: <http://www.w3.org/2006/time#>
-prefix locn: <http://www.w3.org/ns/locn#>
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 prefix skos: <http://www.w3.org/2004/02/skos/core#>
 prefix ex: <http://example.com/>
@@ -18,6 +16,11 @@ prefix example-ewr-mv-validity-period: <http://example.com/ewr/mv/be/validity_pe
 prefix example-ewr-mv-pr-adr: <http://example.com/ewr/mv/principal_residence/be/address/>
 
 CONSTRUCT {
+	# Needed for the SHACL validation
+	?persURL a foaf:Agent .
+	example-ewr:bern a foaf:Agent .
+	ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence a cv:EvidenceType .
+	
 	?mvURL a cv:Evidence ;
 		dct:publisher example-ewr:bern ;
 		dct:conformsTo ex:evidenceTypeEWRMeldeverhaeltnisPrincipalResidence ;
@@ -58,7 +61,6 @@ WHERE {
   BIND (xsd:date(?startDate) as ?startDateAsDate)
   BIND (xsd:date(?endDate) as ?endDateAsDate)
   }
-
 
 
 
