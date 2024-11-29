@@ -2,6 +2,9 @@
 The following full-stack has been implemented and is available in this repository:  
 ![Full stack](images/ld_proto_fullstack.png)
 
+The full report for this project is available [here](Rapport_HES_SO_VS_Prototyp_Linked_Data_v1.0.pdf) (Document in French).  
+The project was done by the [Data Semantics Lab](https://www.hevs.ch/en/applied-research/research-institute-informatics/data-semantics-lab-7934) of the HES-SO Valais/Wallis - [Institute of Informatics](https://www.hevs.ch/en/applied-research/research-institute-informatics/) - Sierre
+
 Find here under explanations about:
 - [Original data and data transformation](#data-transformation)
 - [Data validation](#data-validation-with-shacl)
